@@ -93,7 +93,7 @@ The table below summarizes the error statistics for each AI-produced translation
 
 ## A Note on Reproducibility
 
-Our motivation in publishing this code is to enable reproducability of our work. However, we would instead challenge the community to extend our work, using these materials as a reference. The specific source examples in this repository are limited to only one kind of code-related task (Java to Python translation) for which generative code models can provide aid. There are many other kinds of tasks for which generative code models can provide support, such as natural language to code, code documentation, code autocomplete, test case generation, bug repair, and others. We encourage further research into these use cases, especially around how intelligent user interfaces can help users achieve successful outcomes when working in the presence of erroneous model output.
+Our motivation in publishing this code is to enable others to reproduce of our work. However, we would instead challenge the community to extend our work, using these materials as a reference. The specific source examples in this repository are limited to only one kind of code-related task (Java to Python translation) for which generative code models can provide aid. There are many other kinds of tasks for which generative code models can provide support, such as natural language to code, code documentation, code autocomplete, test case generation, bug repair, and others. We encourage further research into these use cases, especially around how intelligent user interfaces can help users achieve successful outcomes when working in the presence of erroneous model output.
 
 ## Citation
 
