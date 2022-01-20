@@ -1,0 +1,584 @@
+```
+        self.heap[index] = item
+```
+      PriorityQueue-1-Better.py:23:23 -> Translation Error: Need to append to extend the heap for the new item.
+
+
+```
+        self._heapify(self.heap, len(self.heap))
+```
+      PriorityQueue-1-Better.py:42:42 -> Translation Error: Incorrect arguments in method call
+
+
+```
+        if not self.heap.empty():
+```
+      PriorityQueue-1-Better.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-2-Better.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-4-Better.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-2-Worse.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-3-Worse.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-5-Worse.py:51:51 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-1-Worse.py:52:52 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-4-Worse.py:53:53 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+            return self.heap.pop()
+```
+       PriorityQueue-2-Worse.py:52:52 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-3-Worse.py:52:52 -> Translation Error: Did not correctly translate functionality from Java to Python
+      PriorityQueue-1-Better.py:52:52 -> Translation Error: Incorrect return object
+      PriorityQueue-2-Better.py:52:52 -> Translation Error: Incorrect return object
+       PriorityQueue-1-Worse.py:53:53 -> Translation Error: Did not correctly translate functionality from Java to Python
+      PriorityQueue-1-Better.py:54:54 -> Translation Error: Did not correctly translate functionality from Java to Python
+      PriorityQueue-5-Better.py:54:54 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:54:54 -> Translation Error: Incorrect return object
+       PriorityQueue-5-Worse.py:54:54 -> Translation Error: Incorrect return object
+       PriorityQueue-1-Worse.py:55:55 -> Translation Error: Incorrect return object
+
+
+```
+        saved_heap = copy.deepcopy(self.heap)
+```
+      PriorityQueue-1-Better.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+      PriorityQueue-5-Better.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+       PriorityQueue-2-Worse.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+       PriorityQueue-3-Worse.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+       PriorityQueue-5-Worse.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+       PriorityQueue-1-Worse.py:64:64 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+       PriorityQueue-4-Worse.py:65:65 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+
+
+```
+        while not self.heap.empty():
+```
+      PriorityQueue-1-Better.py:65:65 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-2-Better.py:65:65 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-2-Worse.py:65:65 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-3-Worse.py:65:65 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-5-Worse.py:65:65 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-1-Worse.py:66:66 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-4-Worse.py:67:67 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+        return self.heap.empty()
+```
+       PriorityQueue-1-Worse.py:60:60 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-4-Worse.py:61:61 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-1-Better.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-2-Better.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+      PriorityQueue-4-Better.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+       PriorityQueue-2-Worse.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+        self._heapify(self.heap)
+```
+      PriorityQueue-2-Better.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+      PriorityQueue-3-Better.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+      PriorityQueue-4-Better.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+      PriorityQueue-5-Better.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+       PriorityQueue-2-Worse.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+       PriorityQueue-5-Worse.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+      PriorityQueue-2-Better.py:42:42 -> Translation Error: Missing argument in method call
+      PriorityQueue-3-Better.py:42:42 -> Translation Error: Missing argument in method call
+      PriorityQueue-4-Better.py:42:42 -> Translation Error: Missing argument in method call
+      PriorityQueue-5-Better.py:42:42 -> Translation Error: Missing argument in method call
+       PriorityQueue-2-Worse.py:42:42 -> Translation Error: Missing argument in method call
+       PriorityQueue-5-Worse.py:42:42 -> Translation Error: Missing argument in method call
+       PriorityQueue-4-Worse.py:44:44 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+       PriorityQueue-4-Worse.py:44:44 -> Translation Error: Missing argument in method call
+
+
+```
+        return len(self.heap.keys())
+```
+      PriorityQueue-2-Better.py:47:47 -> Translation Error: List does not have a `keys()` method
+
+
+```
+        saved_heap = copy.copy(self.heap)
+```
+      PriorityQueue-2-Better.py:63:63 -> Translation Error: Incorrect way to copy a Python object
+
+
+```
+            parent_index = (index - 1) / 2
+```
+      PriorityQueue-3-Better.py:25:25 -> Language Error: Floating point division (/) instead of integer division (//)
+
+
+```
+                self.heap[parent_index] = item
+```
+      PriorityQueue-3-Better.py:28:28 -> No Error: This code actually works
+
+
+```
+        self.heap[:index] = self.heap[index + 1 :]
+```
+      PriorityQueue-3-Better.py:40:40 -> Spurious Error: Unnecessary `:`
+      PriorityQueue-3-Better.py:40:40 -> Spurious Error: Unnecessary `:`
+      PriorityQueue-5-Better.py:40:40 -> Spurious Error: Unnecessary `:`
+      PriorityQueue-5-Better.py:40:40 -> Spurious Error: Unnecessary `:`
+      PriorityQueue-3-Better.py:40:40 -> Translation Error: Incorrect index on lhs
+      PriorityQueue-5-Better.py:40:40 -> Translation Error: Incorrect index on lhs
+      PriorityQueue-3-Better.py:40:40 -> Translation Error: Incorrect index on rhs
+      PriorityQueue-5-Better.py:40:40 -> Translation Error: Incorrect index on rhs
+
+
+```
+    def size(self, cls):
+```
+      PriorityQueue-3-Better.py:45:45 -> Translation Error: Incorrect method signature (spurious argument)
+
+
+```
+        return len(cls.heap())
+```
+      PriorityQueue-3-Better.py:47:47 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return self.heap.is_empty()
+```
+      PriorityQueue-3-Better.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+        saved_heap = deepcopy(self.heap)
+```
+      PriorityQueue-3-Better.py:63:63 -> Translation Error: Unnecessary deep copy (Java only creates a shallow copy)
+
+
+```
+            results.append(self.remove())
+```
+      PriorityQueue-3-Better.py:66:66 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+        n = len(x)
+        #  Transform  bottom - up .  The  largest  index  there 's  any  point  to  looking  at
+        #  is  the  largest  with  a  child  index  in - range ,  so  must  have  2 * i  +  1  <  n ,
+        #  or  i  <  ( n - 1 ) / 2 .  If  n  is  even  =  2 * j ,  this  is  ( 2 * j - 1 ) / 2  =  j - 1/2  so
+        #  j - 1  is  the  largest ,  which  is  n / /2  -  1 .  If  n  is  odd  =  2 * j + 1 ,  this  is
+        #  ( 2 * j + 1-1 ) / 2  =  j  so  j - 1  is  the  largest ,  and  that 's  again  n / /2-1 .
+        for i in reversed(range(n // 2)):
+            _siftup(x, i)
+```
+      PriorityQueue-3-Better.py:77:84 -> Spurious Error: Off the rails
+
+
+```
+        if size > 0:
+            left_index = (index * 2) + 1
+            right_index = (index * 2) + 2
+            parent = self.heap[index]
+            max_index = index
+            if left_index < size and self.heap[left_index] > parent:
+                max_index = left_index
+            if right_index < size and self.heap[right_index] > self.heap[left_index]:
+                max_index = right_index
+            if max_index != index:
+                #  swap  them  and  recurse  on  the  subtree  rooted  at  min _ index  heap [ index ]
+                self.heap[index] = self.heap[max_index]
+                self.heap[max_index] = parent
+                self._heapify(max_index, size)
+```
+      PriorityQueue-3-Better.py:80:93 -> Code Omission Error (13 SLOC): Missing functionality in method implementation
+
+
+```
+                self.heap[parentIndex] = item
+```
+      PriorityQueue-4-Better.py:28:28 -> No Error: This code actually works
+
+
+```
+        self.heap[index] = element
+```
+       PriorityQueue-5-Worse.py:40:40 -> Translation Error: Did not correctly translate functionality from Java to Python
+      PriorityQueue-4-Better.py:41:41 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return len(self.heap())
+```
+       PriorityQueue-3-Worse.py:47:47 -> Spurious Error: Instance member access does not use `()`
+      PriorityQueue-4-Better.py:47:47 -> Translation Error: Instance member invoked as method
+       PriorityQueue-4-Worse.py:49:49 -> Translation Error: Instance member invoked as method
+
+
+```
+            return self.heap.get(0)
+```
+      PriorityQueue-4-Better.py:52:52 -> Language Error: Python list does not have a `get()` method, array lookup required
+       PriorityQueue-4-Worse.py:54:54 -> Language Error: Python list does not have a `get()` method, array lookup required
+
+
+```
+        saved_heap = [self.heap]
+```
+      PriorityQueue-4-Better.py:63:63 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        while not self.heap:
+```
+      PriorityQueue-4-Better.py:65:65 -> Translation Error: Incorrect logic
+      PriorityQueue-5-Better.py:65:65 -> Translation Error: Incorrect logic
+
+
+```
+        """ Transform list into a heap , in - place , in O ( len ( x ) ) time . """
+        n = len(x)
+        #  Transform  bottom - up .  The  largest  index  there 's  any  point  to  looking  at
+        #  is  the  largest  with  a  child  index  in - range ,  so  must  have  2 * i  +  1  <  n ,
+        #  or  i  <  ( n - 1 ) / 2 .  If  n  is  even  =  2 * j ,  this  is  ( 2 * j - 1 ) / 2  =  j - 1/2  so
+        #  j - 1  is  the  largest ,  which  is  n / /2  -  1 .  If  n  is  odd  =  2 * j + 1 ,  this  is
+        #  ( 2 * j + 1-1 ) / 2  =  j  so  j - 1  is  the  largest ,  and  that 's  again  n / /2-1 .
+        for i in reversed(range(n // 2)):
+            _siftup(x, i)
+```
+      PriorityQueue-4-Better.py:76:84 -> Spurious Error: Off the rails
+
+
+```
+    def _heapify(self, x):
+```
+      PriorityQueue-4-Better.py:75:75 -> Translation Error: Incorrect method signature (missing and wrong arguments)
+
+
+```
+    def _heapify(self, index, size):
+        """Restore  a  section  of  the  heap  to  maintain  heap  properties
+        index  -  the  point  in  the  heap  to  work  on
+        If  the  indicated  point  does  not  have  the  proper  relation  to  its  descendants ,
+        their  values  are  swapped  and  the  descendant  is  then  processed  recursively"""
+        if size > 0:
+            left_index = (index * 2) + 1
+            right_index = (index * 2) + 2
+            parent = self.heap[index]
+            max_index = index
+            if left_index < size and self.heap[left_index] > parent:
+                max_index = left_index
+            if right_index < size and self.heap[right_index] > self.heap[left_index]:
+                max_index = right_index
+            if max_index != index:
+                #  swap  them  and  recurse  on  the  subtree  rooted  at  min _ index  heap [ index ]
+                self.heap[index] = self.heap[max_index]
+                self.heap[max_index] = parent
+                self._heapify(max_index, size)
+```
+      PriorityQueue-4-Better.py:75:93 -> Code Omission Error (15 SLOC): Missing functionality in method implementation
+
+
+```
+        return len(self.heap[0])
+```
+      PriorityQueue-5-Better.py:47:47 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        self.heap.pop(index)
+```
+      PriorityQueue-5-Better.py:41:41 -> No Error: Equivalent code
+       PriorityQueue-1-Worse.py:42:42 -> No Error: This code actually works
+
+
+```
+        index = self.heap.index(item)
+```
+       PriorityQueue-1-Worse.py:22:22 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:22:22 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-3-Worse.py:22:22 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:22:22 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        self.heap.insert(index, item)
+```
+       PriorityQueue-1-Worse.py:23:23 -> No Error: This code actually works
+       PriorityQueue-2-Worse.py:23:23 -> No Error: This code actually works
+       PriorityQueue-3-Worse.py:23:23 -> No Error: This code actually works
+       PriorityQueue-4-Worse.py:23:23 -> No Error: This code actually works
+       PriorityQueue-5-Worse.py:23:23 -> No Error: This code actually works
+
+
+```
+            parent = self.heap.pop()
+```
+       PriorityQueue-5-Worse.py:83:83 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:84:84 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-1-Worse.py:26:26 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:26:26 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-3-Worse.py:26:26 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:26:26 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:26:26 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:86:86 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+                self.heap.insert(parent_index, item)
+```
+       PriorityQueue-1-Worse.py:28:28 -> No Error: This code actually works
+       PriorityQueue-3-Worse.py:28:28 -> No Error: This code actually works
+       PriorityQueue-4-Worse.py:28:28 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:28:28 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+                self.heap.insert(index, parent)
+```
+       PriorityQueue-1-Worse.py:29:29 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:29:29 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-3-Worse.py:29:29 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:29:29 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:29:29 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        element = self.heap[index]
+```
+       PriorityQueue-1-Worse.py:40:40 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:40:40 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-2-Worse.py:39:39 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:39:39 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        self.heapify(0, heap)
+```
+       PriorityQueue-1-Worse.py:43:43 -> Language Error: References to instance members must use `self`
+       PriorityQueue-1-Worse.py:43:43 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+       PriorityQueue-1-Worse.py:43:43 -> Translation Error: Typo in method name
+
+
+```
+        return None
+```
+       PriorityQueue-1-Worse.py:44:44 -> Translation Error: Incorrect return object
+
+
+```
+        return [x for x in results if x["priority "] == 0]
+```
+       PriorityQueue-2-Worse.py:68:68 -> Spurious Error: Irrelevant code
+       PriorityQueue-3-Worse.py:68:68 -> Spurious Error: Irrelevant code
+       PriorityQueue-5-Worse.py:68:68 -> Spurious Error: Irrelevant code
+       PriorityQueue-2-Worse.py:68:68 -> Translation Error: Incorrect return object
+       PriorityQueue-3-Worse.py:68:68 -> Translation Error: Incorrect return object
+       PriorityQueue-5-Worse.py:68:68 -> Translation Error: Incorrect return object
+       PriorityQueue-1-Worse.py:69:69 -> Spurious Error: Irrelevant code
+       PriorityQueue-1-Worse.py:69:69 -> Translation Error: Incorrect return object
+
+
+```
+        if self.heap:
+```
+       PriorityQueue-1-Worse.py:82:82 -> Translation Error: Incorrect logic
+
+
+```
+            parent = self.heap(pop)
+```
+       PriorityQueue-1-Worse.py:85:85 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            max_index = self.heap.index(parent)
+```
+       PriorityQueue-1-Worse.py:86:86 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:87:87 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            if left_index < left_index and self.heap[left_index] > parent:
+```
+       PriorityQueue-2-Worse.py:86:86 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-1-Worse.py:87:87 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-3-Worse.py:87:87 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-4-Worse.py:88:88 -> Translation Error: Incorrect logic (expected comparison with `size`)
+
+
+```
+            if right_index < right_index and self.heap[right_index] > parent:
+```
+       PriorityQueue-4-Worse.py:90:90 -> Translation Error: Incorrect logic (expected comparison with `self.heap[left_index]`)
+       PriorityQueue-4-Worse.py:90:90 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-2-Worse.py:88:88 -> Translation Error: Incorrect logic (expected comparison with `self.heap[left_index]`)
+       PriorityQueue-2-Worse.py:88:88 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-1-Worse.py:89:89 -> Translation Error: Incorrect logic (expected comparison with `self.heap[left_index]`)
+       PriorityQueue-3-Worse.py:89:89 -> Translation Error: Incorrect logic (expected comparison with `self.heap[left_index]`)
+       PriorityQueue-1-Worse.py:89:89 -> Translation Error: Incorrect logic (expected comparison with `size`)
+       PriorityQueue-3-Worse.py:89:89 -> Translation Error: Incorrect logic (expected comparison with `size`)
+
+
+```
+            if max_index != self.heap.index(parent):
+```
+       PriorityQueue-2-Worse.py:90:90 -> Translation Error: Incorrect logic (expected comparison with `index`)
+       PriorityQueue-1-Worse.py:91:91 -> Translation Error: Incorrect logic (expected comparison with `index`)
+
+
+```
+                self.heap[left_index] = self.heap[max_index]
+```
+       PriorityQueue-1-Worse.py:93:93 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-3-Worse.py:93:93 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:94:94 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+                _siftup_max(self.heap, max_index)
+```
+       PriorityQueue-1-Worse.py:95:95 -> Spurious Error: Method called that wasn't present in Python or Java
+       PriorityQueue-1-Worse.py:95:95 -> Translation Error: Incorrect arguments in method call
+       PriorityQueue-1-Worse.py:95:95 -> Translation Error: Incorrect translation of method call (expected `heapify()`)
+
+
+```
+                self.heap.insert(parentIndex, item)
+```
+       PriorityQueue-2-Worse.py:28:28 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        index = self.heap.index()
+```
+       PriorityQueue-2-Worse.py:38:38 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-5-Worse.py:38:38 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:39:39 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        self.heap.remove()
+```
+       PriorityQueue-2-Worse.py:41:41 -> Language Error: Did not convert Java method to equivalent Python method
+
+
+```
+        if heap:
+```
+       PriorityQueue-2-Worse.py:81:81 -> Translation Error: Incorrect logic
+
+
+```
+            max_index = heap.index(parent)
+```
+       PriorityQueue-2-Worse.py:85:85 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+                self._siftup_max(heap, max_index)
+```
+       PriorityQueue-2-Worse.py:94:94 -> Spurious Error: Method called that wasn't present in Python or Java
+       PriorityQueue-2-Worse.py:94:94 -> Translation Error: Incorrect arguments in method call
+       PriorityQueue-2-Worse.py:94:94 -> Translation Error: Incorrect translation of method call (expected `heapify()`)
+
+
+```
+        self._heapify(0, self.heap)
+```
+       PriorityQueue-3-Worse.py:42:42 -> Translation Error: Incorrect argument in method call (expected length of heap, not the heap itself)
+
+
+```
+            parent = self.heap.pop(index)
+```
+       PriorityQueue-3-Worse.py:85:85 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            max_index = heap.index[parent]
+```
+       PriorityQueue-3-Worse.py:86:86 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            if max_index != left_index:
+```
+       PriorityQueue-3-Worse.py:91:91 -> Translation Error: Incorrect logic
+       PriorityQueue-4-Worse.py:92:92 -> Translation Error: Incorrect logic
+
+
+```
+                self._siftup_max(self.heap, max_index)
+```
+       PriorityQueue-3-Worse.py:95:95 -> Spurious Error: Method called that wasn't present in Python or Java
+       PriorityQueue-3-Worse.py:95:95 -> Translation Error: Incorrect arguments in method call
+       PriorityQueue-3-Worse.py:95:95 -> Translation Error: Incorrect translation of method call (expected `heapify()`)
+
+
+```
+        index = heap.index(item)
+```
+       PriorityQueue-4-Worse.py:22:22 -> Language Error: References to instance members must use `self`
+       PriorityQueue-4-Worse.py:22:22 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        self.remove()
+```
+       PriorityQueue-5-Worse.py:41:41 -> Translation Error: Did not correctly translate functionality from Java to Python
+       PriorityQueue-4-Worse.py:43:43 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return [x for x in results if x["priority"] == 0]
+```
+       PriorityQueue-4-Worse.py:70:70 -> Spurious Error: Inclusion of irrelevant code
+       PriorityQueue-4-Worse.py:70:70 -> Translation Error: Incorrect return object
+
+
+```
+                self._heapify(self.heap, 0, max_index)
+```
+       PriorityQueue-4-Worse.py:96:96 -> Translation Error: Incorrect arguments in method call
+
+
+```
+            return heap.pop()
+```
+       PriorityQueue-5-Worse.py:52:52 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return self.heap.Empty()
+```
+       PriorityQueue-5-Worse.py:59:59 -> Language Error: Incorrect way to check for empty list (Python list does not have an `empty()` method)
+
+
+```
+            maxIndex = heap.index(parent)
+```
+       PriorityQueue-5-Worse.py:84:84 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            if leftIndex < leftIndex and self.heap[leftIndex] > parent:
+```
+       PriorityQueue-5-Worse.py:85:85 -> Translation Error: Incorrect logic
+
+
+```
+            if rightIndex < rightIndex and self.heap[rightIndex] > parent:
+```
+       PriorityQueue-5-Worse.py:87:87 -> Translation Error: Incorrect logic
+
+
+```
+            if maxIndex != leftIndex:
+```
+       PriorityQueue-5-Worse.py:89:89 -> Translation Error: Incorrect logic
+
+
+```
+                self._heapify(self.heap)
+```
+       PriorityQueue-5-Worse.py:93:93 -> Translation Error: Incorrect arguments in method call
+
+

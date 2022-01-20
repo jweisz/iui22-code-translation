@@ -1,0 +1,709 @@
+```
+            current = current.getChildren().setdefault(l, ())
+```
+    Trie-1-Better.py:43:43 -> Translation Error: Did not correctly translate functionality from Java to Python
+    Trie-5-Better.py:47:47 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            node = current.getChildren()[ch]
+```
+    Trie-1-Better.py:51:51 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-2-Worse.py:51:51 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+        delete(self.root, word, 0)
+```
+    Trie-1-Better.py:61:61 -> Language Error: Instance method calls must use `self`
+     Trie-2-Worse.py:61:61 -> Language Error: Instance method calls must use `self`
+     Trie-4-Worse.py:61:61 -> Language Error: Instance method calls must use `self`
+     Trie-5-Worse.py:61:61 -> Language Error: Instance method calls must use `self`
+    Trie-1-Better.py:61:61 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-2-Worse.py:61:61 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-4-Worse.py:61:61 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-5-Worse.py:61:61 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+    def delete(self, current, word, index):
+```
+    Trie-4-Better.py:70:70 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+    Trie-5-Better.py:72:72 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+    Trie-1-Better.py:63:63 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-5-Worse.py:63:63 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-1-Worse.py:64:64 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-2-Worse.py:64:64 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-3-Worse.py:64:64 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-4-Worse.py:64:64 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+    Trie-2-Better.py:65:65 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+    Trie-3-Better.py:65:65 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+
+
+```
+            return current.getChildren()
+```
+    Trie-1-Better.py:73:73 -> Translation Error: Incorrect logic
+     Trie-1-Worse.py:74:74 -> Translation Error: Incorrect logic
+    Trie-2-Better.py:75:75 -> Translation Error: Incorrect logic
+    Trie-5-Better.py:77:77 -> Translation Error: Incorrect logic
+
+
+```
+            self.delete(node, word, index + 1) and not node.isEndOfWord()
+```
+    Trie-1-Better.py:80:80 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-1-Worse.py:81:81 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-2-Better.py:82:82 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+        self.enumerate([], root, 0, entries)
+```
+    Trie-1-Better.py:91:91 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-1-Better.py:91:91 -> Language Error: References to instance members must use `self`
+    Trie-1-Better.py:91:91 -> Spurious Error: Extra argument present in method call
+    Trie-1-Better.py:91:91 -> Translation Error: Incorrect argument type in method call (expected string, not array)
+
+
+```
+    def enumerate(self, entry, node, entries):
+```
+    Trie-1-Better.py:94:94 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-5-Worse.py:94:94 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-1-Worse.py:95:95 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-2-Worse.py:95:95 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-3-Worse.py:99:99 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+     Trie-4-Worse.py:99:99 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+  Trie-2-Better.py:102:102 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+  Trie-5-Better.py:104:104 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+  Trie-3-Better.py:105:105 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+  Trie-4-Better.py:111:111 -> Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+
+
+```
+            entries.append(entry.rstrip())
+```
+    Trie-1-Better.py:99:99 -> Spurious Error: Unnecessary call to `rstrip()`
+  Trie-2-Better.py:107:107 -> Spurious Error: Unnecessary call to `rstrip()`
+   Trie-3-Worse.py:107:107 -> Spurious Error: Unnecessary call to `rstrip()`
+   Trie-4-Worse.py:107:107 -> Spurious Error: Unnecessary call to `rstrip()`
+
+
+```
+        keys = current.getchildren().keys()
+```
+  Trie-1-Better.py:100:100 -> Translation Error: Typo in method name
+   Trie-1-Worse.py:104:104 -> Translation Error: Typo in method name
+
+
+```
+        keys.sort()
+```
+  Trie-1-Better.py:101:101 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+   Trie-5-Worse.py:104:104 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+   Trie-1-Worse.py:105:105 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+   Trie-2-Worse.py:105:105 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+  Trie-2-Better.py:109:109 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+   Trie-3-Worse.py:109:109 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+   Trie-4-Worse.py:109:109 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+  Trie-5-Better.py:111:111 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+  Trie-3-Better.py:112:112 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+  Trie-4-Better.py:118:118 -> Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+
+
+```
+            entry.append(chr(key))
+```
+  Trie-1-Better.py:103:103 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+  Trie-1-Better.py:103:103 -> Spurious Error: Unnecessary call to `chr()`
+   Trie-5-Worse.py:106:106 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+   Trie-5-Worse.py:106:106 -> Spurious Error: Unnecessary call to `chr()`
+   Trie-1-Worse.py:107:107 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+   Trie-2-Worse.py:107:107 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+   Trie-1-Worse.py:107:107 -> Spurious Error: Unnecessary call to `chr()`
+   Trie-2-Worse.py:107:107 -> Spurious Error: Unnecessary call to `chr()`
+  Trie-2-Better.py:111:111 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+   Trie-3-Worse.py:111:111 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+  Trie-2-Better.py:111:111 -> Spurious Error: Unnecessary call to `chr()`
+   Trie-3-Worse.py:111:111 -> Spurious Error: Unnecessary call to `chr()`
+  Trie-5-Better.py:113:113 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+  Trie-5-Better.py:113:113 -> Spurious Error: Unnecessary call to `chr()`
+  Trie-3-Better.py:114:114 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+  Trie-3-Better.py:114:114 -> Spurious Error: Unnecessary call to `chr()`
+  Trie-4-Better.py:120:120 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+  Trie-4-Better.py:120:120 -> Spurious Error: Unnecessary call to `chr()`
+
+
+```
+            enumerate(entry, current.getChildren()[key], entries)
+```
+  Trie-1-Better.py:104:104 -> Language Error: Instance method calls must use `self`
+  Trie-1-Better.py:104:104 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+   Trie-1-Worse.py:108:108 -> Language Error: Instance method calls must use `self`
+   Trie-1-Worse.py:108:108 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+            entry.pop()
+```
+  Trie-1-Better.py:105:105 -> Translation Error: Incorrect translation of character removal from strings
+   Trie-5-Worse.py:108:108 -> Translation Error: Incorrect translation of character removal from strings
+   Trie-1-Worse.py:109:109 -> Translation Error: Incorrect translation of character removal from strings
+   Trie-2-Worse.py:109:109 -> Translation Error: Incorrect translation of character removal from strings
+  Trie-2-Better.py:113:113 -> Translation Error: Incorrect translation of character removal from strings
+   Trie-3-Worse.py:113:113 -> Translation Error: Incorrect translation of character removal from strings
+   Trie-4-Worse.py:113:113 -> Translation Error: Incorrect translation of character removal from strings
+  Trie-5-Better.py:115:115 -> Translation Error: Incorrect translation of character removal from strings
+  Trie-3-Better.py:116:116 -> Translation Error: Incorrect translation of character removal from strings
+  Trie-4-Better.py:122:122 -> Translation Error: Incorrect translation of character removal from strings
+
+
+```
+            insert(entry)
+```
+  Trie-1-Better.py:112:112 -> Language Error: Instance method calls must use `self`
+   Trie-1-Worse.py:116:116 -> Language Error: Instance method calls must use `self`
+
+
+```
+        return self.is_Word
+```
+    Trie-2-Better.py:22:22 -> Translation Error: Typo in instance member name
+    Trie-3-Better.py:22:22 -> Translation Error: Typo in instance member name
+    Trie-4-Better.py:22:22 -> Translation Error: Typo in instance member name
+
+
+```
+            current = current.getChildren().setdefault(l, (c for c in current))
+```
+    Trie-2-Better.py:45:45 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return os.path.join(root, word, 0)
+```
+    Trie-2-Better.py:63:63 -> Language Error: References to instance members must use `self`
+    Trie-2-Better.py:63:63 -> Spurious Error: Inclusion of irrelevant code (`os.path.join`)
+    Trie-2-Better.py:63:63 -> Translation Error: Incorrect instance method called, expected call to helper method
+    Trie-2-Better.py:63:63 -> Translation Error: Java method does not return a value
+
+
+```
+        enumerate(
+```
+    Trie-3-Better.py:92:92 -> Language Error: Instance method calls must use `self`
+    Trie-3-Better.py:92:92 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-3-Better.py:92:92 -> Translation Error: Incorrect arguments in method call
+    Trie-2-Better.py:93:93 -> Language Error: Instance method calls must use `self`
+    Trie-2-Better.py:93:93 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-2-Better.py:93:93 -> Translation Error: Incorrect arguments in method call
+    Trie-5-Better.py:95:95 -> Language Error: Instance method calls must use `self`
+    Trie-5-Better.py:95:95 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-5-Better.py:95:95 -> Translation Error: Incorrect arguments in method call
+    Trie-4-Better.py:98:98 -> Language Error: Instance method calls must use `self`
+    Trie-4-Better.py:98:98 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-4-Better.py:98:98 -> Translation Error: Incorrect arguments in method call
+
+
+```
+            [
+                root
+                for root, dirs, files in os.walk(". ")
+                if not os.path.exists(os.path.join(root, "__init__.py"))
+            ]
+```
+    Trie-2-Better.py:94:98 -> Spurious Error: Irrelevant code
+   Trie-5-Better.py:96:100 -> Spurious Error: Irrelevant code
+   Trie-4-Better.py:99:103 -> Spurious Error: Irrelevant code
+
+
+```
+            self.enumerate(entry, current.getChildren()[key], entries)
+```
+  Trie-2-Better.py:112:112 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+  Trie-2-Better.py:112:112 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+  Trie-5-Better.py:114:114 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+  Trie-5-Better.py:114:114 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+import os
+```
+      Trie-2-Better.py:1:1 -> Spurious Error: Unnecessary import
+      Trie-3-Better.py:1:1 -> Spurious Error: Unnecessary import
+      Trie-4-Better.py:1:1 -> Spurious Error: Unnecessary import
+      Trie-5-Better.py:1:1 -> Spurious Error: Unnecessary import
+
+
+```
+            current = current.get_children()[l]
+```
+    Trie-3-Better.py:46:46 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            node = current.get_children()[ch]
+```
+     Trie-4-Worse.py:53:53 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-5-Worse.py:53:53 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+    Trie-3-Better.py:54:54 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+        return delete(root, word, 0)
+```
+    Trie-3-Better.py:63:63 -> Language Error: Instance method calls must use `self`
+    Trie-3-Better.py:63:63 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-3-Better.py:63:63 -> Language Error: References to instance members must use `self`
+    Trie-3-Better.py:63:63 -> Translation Error: Java method does not return a value
+
+
+```
+            return current.get_children()
+```
+    Trie-3-Better.py:75:75 -> Translation Error: Incorrect logic
+    Trie-3-Better.py:86:86 -> Translation Error: Incorrect logic
+
+
+```
+            self.delete(node, word, index + 1) and not node.is_end_of_word()
+```
+     Trie-5-Worse.py:80:80 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-3-Better.py:82:82 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-4-Better.py:87:87 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+            [
+                root
+                for root, dirs, files in os.walk(". ")
+                if not os.path.exists(os.path.join(root, "__init__.py "))
+            ]
+```
+    Trie-3-Better.py:93:97 -> Spurious Error: Irrelevant code
+
+
+```
+        return [
+```
+    Trie-3-Better.py:99:99 -> Translation Error: Incorrect return object
+  Trie-4-Better.py:105:105 -> Translation Error: Incorrect return object
+
+
+```
+            root
+            for root, dirs, files in enumerate(files)
+            if not os.path.exists(os.path.join(root, "__init__.py "))
+        ]
+```
+  Trie-3-Better.py:100:103 -> Spurious Error: Irrelevant code
+
+
+```
+            entries.append(entry.strip())
+```
+  Trie-3-Better.py:110:110 -> Spurious Error: Unnecessary call to `strip()`
+
+
+```
+            self.enumerate(entry, current.get_children()[key], entries)
+```
+  Trie-3-Better.py:115:115 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+  Trie-4-Better.py:121:121 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+    def merge(self, other_trie: Trie):
+```
+  Trie-3-Better.py:118:118 -> No Error: Explicit type annotation is OK
+
+
+```
+            current = current.get_children().setdefault(l, ())
+```
+    Trie-4-Better.py:47:47 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+        return os.path.join(
+            root,
+            word,
+        )
+```
+    Trie-4-Better.py:65:68 -> Spurious Error: Irrelevant code
+
+
+```
+        return os.path.join(
+```
+    Trie-4-Better.py:65:65 -> Translation Error: Expected call to helper method
+    Trie-4-Better.py:65:65 -> Translation Error: Java method does not return a value
+
+
+```
+            root
+            for root, dirs, files in entries
+            if not os.path.exists(os.path.join(root, "__init__.py"))
+        ]
+```
+  Trie-4-Better.py:106:109 -> Spurious Error: Irrelevant code
+
+
+```
+    def Merge(self, other_trie):
+```
+  Trie-4-Better.py:124:124 -> No Error: Stylistic difference in method naming
+
+
+```
+            return current.get_children() == []
+```
+    Trie-4-Better.py:80:80 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+    Trie-4-Better.py:91:91 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-5-Worse.py:73:73 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-5-Worse.py:84:84 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+
+
+```
+        self.children = None
+```
+    Trie-5-Better.py:15:15 -> Translation Error: Incorrect assignment value
+
+
+```
+        delete(root, word, 0)
+```
+     Trie-3-Worse.py:61:61 -> Language Error: Instance method calls must use `self`
+     Trie-3-Worse.py:61:61 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-3-Worse.py:61:61 -> Language Error: References to instance members must use `self`
+     Trie-1-Worse.py:62:62 -> Language Error: Instance method calls must use `self`
+     Trie-1-Worse.py:62:62 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-1-Worse.py:62:62 -> Language Error: References to instance members must use `self`
+    Trie-5-Better.py:65:65 -> Language Error: Instance method calls must use `self`
+    Trie-5-Better.py:65:65 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-5-Better.py:65:65 -> Language Error: References to instance members must use `self`
+
+
+```
+        node = current.getChildren()[ch]
+```
+    Trie-5-Better.py:80:80 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-1-Worse.py:77:77 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+            self.delete(word, node, index + 1) and not node.isEndOfWord()
+```
+    Trie-5-Better.py:84:84 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+    Trie-5-Better.py:84:84 -> Translation Error: Incorrect argument order in method call
+
+
+```
+        return entries
+```
+  Trie-5-Better.py:116:116 -> Spurious Error: Unnecessary return statement
+
+
+```
+        current = root
+```
+     Trie-1-Worse.py:40:40 -> Language Error: References to instance members must use `self`
+     Trie-1-Worse.py:50:50 -> Language Error: References to instance members must use `self`
+     Trie-4-Worse.py:51:51 -> Language Error: References to instance members must use `self`
+     Trie-5-Worse.py:51:51 -> Language Error: References to instance members must use `self`
+     Trie-3-Worse.py:39:39 -> Language Error: References to instance members must use `self`
+     Trie-4-Worse.py:39:39 -> Language Error: References to instance members must use `self`
+     Trie-5-Worse.py:39:39 -> Language Error: References to instance members must use `self`
+     Trie-3-Worse.py:49:49 -> Language Error: References to instance members must use `self`
+
+
+```
+            current = current.children.setdefault(l, (c for c in current.children))
+```
+     Trie-2-Worse.py:42:42 -> Translation Error: Did not correctly translate functionality from Java to Python
+     Trie-3-Worse.py:42:42 -> Translation Error: Did not correctly translate functionality from Java to Python
+     Trie-1-Worse.py:43:43 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+            node = current.children[ch]
+```
+     Trie-3-Worse.py:51:51 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-3-Worse.py:51:51 -> Translation Error: Instance member not accessed via method
+     Trie-1-Worse.py:52:52 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-1-Worse.py:52:52 -> Translation Error: Instance member not accessed via method
+
+
+```
+            current.getChildren().remove(ch)
+```
+     Trie-1-Worse.py:84:84 -> Language Error: Did not convert Java method to equivalent Python method
+
+
+```
+            return current.getChildren()[ch]
+```
+     Trie-1-Worse.py:85:85 -> Spurious Error: Unnecessary array lookup
+
+
+```
+        self.enumerate("".join(entry) for entry in entries)
+```
+     Trie-5-Worse.py:91:91 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-5-Worse.py:91:91 -> Spurious Error: Irrelevant code
+     Trie-5-Worse.py:91:91 -> Translation Error: Incorrect arguments in method call
+     Trie-1-Worse.py:92:92 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-2-Worse.py:92:92 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-3-Worse.py:92:92 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-4-Worse.py:92:92 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-1-Worse.py:92:92 -> Spurious Error: Irrelevant code
+     Trie-2-Worse.py:92:92 -> Spurious Error: Irrelevant code
+     Trie-3-Worse.py:92:92 -> Spurious Error: Irrelevant code
+     Trie-4-Worse.py:92:92 -> Spurious Error: Irrelevant code
+     Trie-1-Worse.py:92:92 -> Translation Error: Incorrect arguments in method call
+     Trie-2-Worse.py:92:92 -> Translation Error: Incorrect arguments in method call
+     Trie-3-Worse.py:92:92 -> Translation Error: Incorrect arguments in method call
+     Trie-4-Worse.py:92:92 -> Translation Error: Incorrect arguments in method call
+
+
+```
+            entries.append(entry.pop())
+```
+   Trie-1-Worse.py:103:103 -> Spurious Error: Unnecessary call to `pop()`
+   Trie-2-Worse.py:103:103 -> Spurious Error: Unnecessary call to `pop()`
+
+
+```
+        return other_trie.copy()
+```
+   Trie-1-Worse.py:117:117 -> Spurious Error: Unnecessary return statement
+
+
+```
+        current.end_of_word = True
+```
+     Trie-2-Worse.py:44:44 -> Translation Error: Expected method call to assign value to instance member
+     Trie-3-Worse.py:44:44 -> Translation Error: Expected method call to assign value to instance member
+     Trie-2-Worse.py:44:44 -> Translation Error: Instance member doesn’t exist
+     Trie-3-Worse.py:44:44 -> Translation Error: Instance member doesn’t exist
+     Trie-4-Worse.py:46:46 -> Translation Error: Expected method call to assign value to instance member
+     Trie-4-Worse.py:46:46 -> Translation Error: Instance member doesn’t exist
+
+
+```
+        return current
+```
+     Trie-2-Worse.py:45:45 -> Spurious Error: Unnecessary return statement
+     Trie-3-Worse.py:45:45 -> Spurious Error: Unnecessary return statement
+     Trie-4-Worse.py:47:47 -> Spurious Error: Unnecessary return statement
+     Trie-5-Worse.py:47:47 -> Spurious Error: Unnecessary return statement
+
+
+```
+        return current.end_of_word
+```
+     Trie-2-Worse.py:55:55 -> Translation Error: Instance member doesn’t exist
+     Trie-3-Worse.py:55:55 -> Translation Error: Instance member doesn’t exist
+     Trie-2-Worse.py:55:55 -> Translation Error: Instance member not accessed via method
+     Trie-3-Worse.py:55:55 -> Translation Error: Instance member not accessed via method
+
+
+```
+        return self.root, word, 0
+```
+     Trie-2-Worse.py:62:62 -> Spurious Error: Unnecessary return statement
+
+
+```
+            if not current.end_of_word():
+```
+     Trie-2-Worse.py:71:71 -> Translation Error: Instance method doesn’t exist
+     Trie-3-Worse.py:71:71 -> Translation Error: Instance method doesn’t exist
+     Trie-4-Worse.py:71:71 -> Translation Error: Instance method doesn’t exist
+
+
+```
+            current.end_of_word = False
+```
+     Trie-2-Worse.py:73:73 -> Translation Error: Expected method call to assign value to instance member
+     Trie-3-Worse.py:73:73 -> Translation Error: Expected method call to assign value to instance member
+     Trie-2-Worse.py:73:73 -> Translation Error: Instance member doesn’t exist
+     Trie-3-Worse.py:73:73 -> Translation Error: Instance member doesn’t exist
+
+
+```
+            return current.children == []
+```
+     Trie-2-Worse.py:74:74 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-3-Worse.py:74:74 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-4-Worse.py:74:74 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-2-Worse.py:74:74 -> Translation Error: Incorrect translation of logical test
+     Trie-3-Worse.py:74:74 -> Translation Error: Incorrect translation of logical test
+     Trie-4-Worse.py:74:74 -> Translation Error: Incorrect translation of logical test
+     Trie-2-Worse.py:74:74 -> Translation Error: Instance member not accessed via method
+     Trie-3-Worse.py:74:74 -> Translation Error: Instance member not accessed via method
+     Trie-4-Worse.py:74:74 -> Translation Error: Instance member not accessed via method
+     Trie-3-Worse.py:85:85 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-3-Worse.py:85:85 -> Translation Error: Instance member not accessed via method
+
+
+```
+        node = current.getChildren()[ch, None]
+```
+     Trie-2-Worse.py:77:77 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+            self.delete(node, word, index + 1) and not node.end_of_word
+```
+     Trie-2-Worse.py:81:81 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-3-Worse.py:81:81 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-4-Worse.py:81:81 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+     Trie-2-Worse.py:81:81 -> Translation Error: Instance member doesn’t exist
+     Trie-3-Worse.py:81:81 -> Translation Error: Instance member doesn’t exist
+     Trie-4-Worse.py:81:81 -> Translation Error: Instance member doesn’t exist
+     Trie-2-Worse.py:81:81 -> Translation Error: Instance member not accessed via method
+     Trie-3-Worse.py:81:81 -> Translation Error: Instance member not accessed via method
+     Trie-4-Worse.py:81:81 -> Translation Error: Instance member not accessed via method
+
+
+```
+            self.enumerate(entry, current.children[key], entries)
+```
+   Trie-2-Worse.py:108:108 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+   Trie-3-Worse.py:112:112 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+
+
+```
+    def _merge(self, other_trie):
+```
+   Trie-5-Worse.py:110:110 -> No Error: Stylistic difference in method naming
+   Trie-2-Worse.py:111:111 -> No Error: Stylistic difference in method naming
+   Trie-3-Worse.py:115:115 -> No Error: Stylistic difference in method naming
+   Trie-4-Worse.py:115:115 -> No Error: Stylistic difference in method naming
+
+
+```
+            self._insert(entry)
+```
+   Trie-2-Worse.py:116:116 -> Translation Error: Incorrect method name used in call
+   Trie-3-Worse.py:120:120 -> Translation Error: Incorrect method name used in call
+   Trie-4-Worse.py:120:120 -> Translation Error: Incorrect method name used in call
+
+
+```
+        return other_trie
+```
+   Trie-5-Worse.py:116:116 -> Spurious Error: Unnecessary return statement
+   Trie-2-Worse.py:117:117 -> Spurious Error: Unnecessary return statement
+   Trie-3-Worse.py:121:121 -> Spurious Error: Unnecessary return statement
+   Trie-4-Worse.py:121:121 -> Spurious Error: Unnecessary return statement
+
+
+```
+            return current.getChildren == []
+```
+     Trie-2-Worse.py:85:85 -> Translation Error: Comparing dictionary to list won't check for empty dictionary
+     Trie-2-Worse.py:85:85 -> Translation Error: Method call missing argument list (need to add `()`)
+
+
+```
+            if node == null:
+```
+     Trie-3-Worse.py:52:52 -> Language Error: Incorrect comparison with `null` instead of `None`
+
+
+```
+        return root, word, 0
+```
+     Trie-3-Worse.py:62:62 -> Spurious Error: Unexpected return value
+
+
+```
+        node = current.children.get[ch, None]
+```
+     Trie-3-Worse.py:77:77 -> Translation Error: Incorrect translation of method call (expected `()`, not `[]`)
+
+
+```
+        return Value(
+            "".join(entry[0] for entry in entries),
+            root="".join(entry[1] for entry in entries),
+            verbose=True,
+        )
+```
+     Trie-3-Worse.py:93:97 -> Spurious Error: Irrelevant code
+     Trie-4-Worse.py:93:97 -> Spurious Error: Irrelevant code
+
+
+```
+        return Value(
+```
+     Trie-3-Worse.py:93:93 -> Translation Error: Incorrect return object
+     Trie-4-Worse.py:93:93 -> Translation Error: Incorrect return object
+
+
+```
+        return self.isWord
+```
+     Trie-4-Worse.py:19:19 -> Translation Error: Typo in instance member name
+     Trie-5-Worse.py:19:19 -> Translation Error: Typo in instance member name
+
+
+```
+            current = current.get_children().setdefault(
+                l, (c for c in current.children)
+            )
+```
+     Trie-4-Worse.py:42:44 -> Translation Error: Did not correctly translate functionality from Java to Python
+     Trie-5-Worse.py:42:44 -> Translation Error: Did not correctly translate functionality from Java to Python
+
+
+```
+                return None
+```
+     Trie-4-Worse.py:55:55 -> Translation Error: Incorrect return object
+
+
+```
+        return self.root
+```
+     Trie-4-Worse.py:62:62 -> Spurious Error: Unexpected return value
+
+
+```
+        node = current.children[ch, None]
+```
+     Trie-4-Worse.py:77:77 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+     Trie-4-Worse.py:77:77 -> Translation Error: Instance member not accessed via method
+
+
+```
+            entry.append(ord(key))
+```
+   Trie-4-Worse.py:111:111 -> Language Error: Python string append uses the `+=` operator, not `.append()`
+   Trie-4-Worse.py:111:111 -> Spurious Error: Unnecessary call to `ord()`
+
+
+```
+            self.enumerate(entry, current.get_children(key), entries)
+```
+   Trie-5-Worse.py:107:107 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+   Trie-5-Worse.py:107:107 -> Translation Error: Incorrect translation of dictionary lookup
+   Trie-4-Worse.py:112:112 -> Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+   Trie-4-Worse.py:112:112 -> Translation Error: Incorrect translation of dictionary lookup
+
+
+```
+        node = current.get_children()[ch, None]
+```
+     Trie-5-Worse.py:76:76 -> Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+
+
+```
+            self.__insert(entry)
+```
+   Trie-5-Worse.py:115:115 -> Translation Error: Incorrect method name used in call
+
+

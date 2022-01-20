@@ -1,0 +1,516 @@
+```
+Translation Error: Did not correctly translate functionality from Java to Python
+```
+     Trie-2-Worse.py:42:42 -> current = current.children.setdefault(l, (c for c in current.children))
+     Trie-3-Worse.py:42:42 -> current = current.children.setdefault(l, (c for c in current.children))
+     Trie-4-Worse.py:42:44 -> current = current.get_children().setdefault(\n                l, (c for c in current.children)\n            )
+     Trie-5-Worse.py:42:44 -> current = current.get_children().setdefault(\n                l, (c for c in current.children)\n            )
+     Trie-1-Worse.py:43:43 -> current = current.children.setdefault(l, (c for c in current.children))
+    Trie-1-Better.py:43:43 -> current = current.getChildren().setdefault(l, ())
+    Trie-2-Better.py:45:45 -> current = current.getChildren().setdefault(l, (c for c in current))
+    Trie-3-Better.py:46:46 -> current = current.get_children()[l]
+    Trie-5-Better.py:47:47 -> current = current.getChildren().setdefault(l, ())
+    Trie-4-Better.py:47:47 -> current = current.get_children().setdefault(l, ())
+
+
+```
+Translation Error: Incorrectly translated `get()` call to array lookup; `get()` required to avoid a `KeyError`
+```
+    Trie-5-Better.py:80:80 -> node = current.getChildren()[ch]
+     Trie-3-Worse.py:51:51 -> node = current.children[ch]
+    Trie-1-Better.py:51:51 -> node = current.getChildren()[ch]
+     Trie-2-Worse.py:51:51 -> node = current.getChildren()[ch]
+     Trie-1-Worse.py:52:52 -> node = current.children[ch]
+     Trie-4-Worse.py:53:53 -> node = current.get_children()[ch]
+     Trie-5-Worse.py:53:53 -> node = current.get_children()[ch]
+    Trie-3-Better.py:54:54 -> node = current.get_children()[ch]
+     Trie-5-Worse.py:76:76 -> node = current.get_children()[ch, None]
+     Trie-4-Worse.py:77:77 -> node = current.children[ch, None]
+     Trie-2-Worse.py:77:77 -> node = current.getChildren()[ch, None]
+     Trie-1-Worse.py:77:77 -> node = current.getChildren()[ch]
+  Trie-2-Better.py:112:112 -> self.enumerate(entry, current.getChildren()[key], entries)
+  Trie-5-Better.py:114:114 -> self.enumerate(entry, current.getChildren()[key], entries)
+
+
+```
+Language Error: Instance method calls must use `self`
+```
+     Trie-3-Worse.py:61:61 -> delete(root, word, 0)
+    Trie-1-Better.py:61:61 -> delete(self.root, word, 0)
+     Trie-2-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-4-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-5-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-1-Worse.py:62:62 -> delete(root, word, 0)
+    Trie-3-Better.py:92:92 -> enumerate(
+    Trie-3-Better.py:63:63 -> return delete(root, word, 0)
+    Trie-2-Better.py:93:93 -> enumerate(
+    Trie-5-Better.py:65:65 -> delete(root, word, 0)
+    Trie-5-Better.py:95:95 -> enumerate(
+    Trie-4-Better.py:98:98 -> enumerate(
+  Trie-1-Better.py:104:104 -> enumerate(entry, current.getChildren()[key], entries)
+   Trie-1-Worse.py:108:108 -> enumerate(entry, current.getChildren()[key], entries)
+  Trie-1-Better.py:112:112 -> insert(entry)
+   Trie-1-Worse.py:116:116 -> insert(entry)
+
+
+```
+Language Error: Python doesn't allow method name overloading, expected call to renamed helper method
+```
+    Trie-1-Better.py:80:80 -> self.delete(node, word, index + 1) and not node.isEndOfWord()
+     Trie-5-Worse.py:80:80 -> self.delete(node, word, index + 1) and not node.is_end_of_word()
+     Trie-3-Worse.py:61:61 -> delete(root, word, 0)
+    Trie-1-Better.py:61:61 -> delete(self.root, word, 0)
+     Trie-2-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-4-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-5-Worse.py:61:61 -> delete(self.root, word, 0)
+     Trie-2-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-3-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-4-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-1-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.isEndOfWord()
+     Trie-5-Worse.py:91:91 -> self.enumerate("".join(entry) for entry in entries)
+    Trie-1-Better.py:91:91 -> self.enumerate([], root, 0, entries)
+     Trie-1-Worse.py:62:62 -> delete(root, word, 0)
+    Trie-2-Better.py:82:82 -> self.delete(node, word, index + 1) and not node.isEndOfWord()
+    Trie-3-Better.py:82:82 -> self.delete(node, word, index + 1) and not node.is_end_of_word()
+    Trie-3-Better.py:92:92 -> enumerate(
+     Trie-1-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-2-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-3-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-4-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+    Trie-3-Better.py:63:63 -> return delete(root, word, 0)
+    Trie-2-Better.py:93:93 -> enumerate(
+    Trie-5-Better.py:84:84 -> self.delete(word, node, index + 1) and not node.isEndOfWord()
+    Trie-5-Better.py:65:65 -> delete(root, word, 0)
+    Trie-5-Better.py:95:95 -> enumerate(
+    Trie-4-Better.py:87:87 -> self.delete(node, word, index + 1) and not node.is_end_of_word()
+    Trie-4-Better.py:98:98 -> enumerate(
+  Trie-1-Better.py:104:104 -> enumerate(entry, current.getChildren()[key], entries)
+   Trie-5-Worse.py:107:107 -> self.enumerate(entry, current.get_children(key), entries)
+   Trie-1-Worse.py:108:108 -> enumerate(entry, current.getChildren()[key], entries)
+   Trie-2-Worse.py:108:108 -> self.enumerate(entry, current.children[key], entries)
+   Trie-3-Worse.py:112:112 -> self.enumerate(entry, current.children[key], entries)
+  Trie-2-Better.py:112:112 -> self.enumerate(entry, current.getChildren()[key], entries)
+   Trie-4-Worse.py:112:112 -> self.enumerate(entry, current.get_children(key), entries)
+  Trie-5-Better.py:114:114 -> self.enumerate(entry, current.getChildren()[key], entries)
+  Trie-3-Better.py:115:115 -> self.enumerate(entry, current.get_children()[key], entries)
+  Trie-4-Better.py:121:121 -> self.enumerate(entry, current.get_children()[key], entries)
+
+
+```
+Language Error: Method needed to be renamed as Python doesn’t allow method name overloading
+```
+    Trie-4-Better.py:70:70 -> def delete(self, current, word, index):
+    Trie-5-Better.py:72:72 -> def delete(self, current, word, index):
+    Trie-1-Better.py:63:63 -> def delete(self, current, word, index):
+     Trie-5-Worse.py:63:63 -> def delete(self, current, word, index):
+     Trie-1-Worse.py:64:64 -> def delete(self, current, word, index):
+     Trie-2-Worse.py:64:64 -> def delete(self, current, word, index):
+     Trie-3-Worse.py:64:64 -> def delete(self, current, word, index):
+     Trie-4-Worse.py:64:64 -> def delete(self, current, word, index):
+    Trie-1-Better.py:94:94 -> def enumerate(self, entry, node, entries):
+     Trie-5-Worse.py:94:94 -> def enumerate(self, entry, node, entries):
+    Trie-2-Better.py:65:65 -> def delete(self, current, word, index):
+    Trie-3-Better.py:65:65 -> def delete(self, current, word, index):
+     Trie-1-Worse.py:95:95 -> def enumerate(self, entry, node, entries):
+     Trie-2-Worse.py:95:95 -> def enumerate(self, entry, node, entries):
+     Trie-3-Worse.py:99:99 -> def enumerate(self, entry, node, entries):
+     Trie-4-Worse.py:99:99 -> def enumerate(self, entry, node, entries):
+  Trie-2-Better.py:102:102 -> def enumerate(self, entry, node, entries):
+  Trie-5-Better.py:104:104 -> def enumerate(self, entry, node, entries):
+  Trie-3-Better.py:105:105 -> def enumerate(self, entry, node, entries):
+  Trie-4-Better.py:111:111 -> def enumerate(self, entry, node, entries):
+
+
+```
+Translation Error: Incorrect logic
+```
+    Trie-1-Better.py:73:73 -> return current.getChildren()
+     Trie-1-Worse.py:74:74 -> return current.getChildren()
+    Trie-2-Better.py:75:75 -> return current.getChildren()
+    Trie-3-Better.py:75:75 -> return current.get_children()
+    Trie-3-Better.py:86:86 -> return current.get_children()
+    Trie-5-Better.py:77:77 -> return current.getChildren()
+
+
+```
+Language Error: References to instance members must use `self`
+```
+     Trie-1-Worse.py:40:40 -> current = root
+     Trie-1-Worse.py:50:50 -> current = root
+     Trie-4-Worse.py:51:51 -> current = root
+     Trie-5-Worse.py:51:51 -> current = root
+     Trie-3-Worse.py:61:61 -> delete(root, word, 0)
+    Trie-1-Better.py:91:91 -> self.enumerate([], root, 0, entries)
+     Trie-1-Worse.py:62:62 -> delete(root, word, 0)
+    Trie-3-Better.py:63:63 -> return delete(root, word, 0)
+    Trie-2-Better.py:63:63 -> return os.path.join(root, word, 0)
+    Trie-5-Better.py:65:65 -> delete(root, word, 0)
+     Trie-3-Worse.py:39:39 -> current = root
+     Trie-4-Worse.py:39:39 -> current = root
+     Trie-5-Worse.py:39:39 -> current = root
+     Trie-3-Worse.py:49:49 -> current = root
+
+
+```
+Translation Error: Incorrect argument type in method call (expected string, not array)
+```
+    Trie-1-Better.py:91:91 -> self.enumerate([], root, 0, entries)
+
+
+```
+Spurious Error: Extra argument present in method call
+```
+    Trie-1-Better.py:91:91 -> self.enumerate([], root, 0, entries)
+
+
+```
+Spurious Error: Unnecessary call to `rstrip()`
+```
+    Trie-1-Better.py:99:99 -> entries.append(entry.rstrip())
+  Trie-2-Better.py:107:107 -> entries.append(entry.rstrip())
+   Trie-3-Worse.py:107:107 -> entries.append(entry.rstrip())
+   Trie-4-Worse.py:107:107 -> entries.append(entry.rstrip())
+
+
+```
+Translation Error: Typo in method name
+```
+  Trie-1-Better.py:100:100 -> keys = current.getchildren().keys()
+   Trie-1-Worse.py:104:104 -> keys = current.getchildren().keys()
+
+
+```
+Language Error: `keys` doesn't have a `sort()` method, must use Python `sorted()` method instead
+```
+  Trie-1-Better.py:101:101 -> keys.sort()
+   Trie-5-Worse.py:104:104 -> keys.sort()
+   Trie-1-Worse.py:105:105 -> keys.sort()
+   Trie-2-Worse.py:105:105 -> keys.sort()
+  Trie-2-Better.py:109:109 -> keys.sort()
+   Trie-3-Worse.py:109:109 -> keys.sort()
+   Trie-4-Worse.py:109:109 -> keys.sort()
+  Trie-5-Better.py:111:111 -> keys.sort()
+  Trie-3-Better.py:112:112 -> keys.sort()
+  Trie-4-Better.py:118:118 -> keys.sort()
+
+
+```
+Spurious Error: Unnecessary call to `chr()`
+```
+  Trie-1-Better.py:103:103 -> entry.append(chr(key))
+   Trie-5-Worse.py:106:106 -> entry.append(chr(key))
+   Trie-1-Worse.py:107:107 -> entry.append(chr(key))
+   Trie-2-Worse.py:107:107 -> entry.append(chr(key))
+  Trie-2-Better.py:111:111 -> entry.append(chr(key))
+   Trie-3-Worse.py:111:111 -> entry.append(chr(key))
+  Trie-5-Better.py:113:113 -> entry.append(chr(key))
+  Trie-3-Better.py:114:114 -> entry.append(chr(key))
+  Trie-4-Better.py:120:120 -> entry.append(chr(key))
+
+
+```
+Language Error: Python string append uses the `+=` operator, not `.append()`
+```
+  Trie-1-Better.py:103:103 -> entry.append(chr(key))
+   Trie-5-Worse.py:106:106 -> entry.append(chr(key))
+   Trie-1-Worse.py:107:107 -> entry.append(chr(key))
+   Trie-2-Worse.py:107:107 -> entry.append(chr(key))
+  Trie-2-Better.py:111:111 -> entry.append(chr(key))
+   Trie-3-Worse.py:111:111 -> entry.append(chr(key))
+   Trie-4-Worse.py:111:111 -> entry.append(ord(key))
+  Trie-5-Better.py:113:113 -> entry.append(chr(key))
+  Trie-3-Better.py:114:114 -> entry.append(chr(key))
+  Trie-4-Better.py:120:120 -> entry.append(chr(key))
+
+
+```
+Translation Error: Incorrect translation of character removal from strings
+```
+  Trie-1-Better.py:105:105 -> entry.pop()
+   Trie-5-Worse.py:108:108 -> entry.pop()
+   Trie-1-Worse.py:109:109 -> entry.pop()
+   Trie-2-Worse.py:109:109 -> entry.pop()
+  Trie-2-Better.py:113:113 -> entry.pop()
+   Trie-3-Worse.py:113:113 -> entry.pop()
+   Trie-4-Worse.py:113:113 -> entry.pop()
+  Trie-5-Better.py:115:115 -> entry.pop()
+  Trie-3-Better.py:116:116 -> entry.pop()
+  Trie-4-Better.py:122:122 -> entry.pop()
+
+
+```
+Translation Error: Typo in instance member name
+```
+    Trie-2-Better.py:22:22 -> return self.is_Word
+    Trie-3-Better.py:22:22 -> return self.is_Word
+    Trie-4-Better.py:22:22 -> return self.is_Word
+     Trie-4-Worse.py:19:19 -> return self.isWord
+     Trie-5-Worse.py:19:19 -> return self.isWord
+
+
+```
+Spurious Error: Inclusion of irrelevant code (`os.path.join`)
+```
+    Trie-2-Better.py:63:63 -> return os.path.join(root, word, 0)
+
+
+```
+Translation Error: Incorrect instance method called, expected call to helper method
+```
+    Trie-2-Better.py:63:63 -> return os.path.join(root, word, 0)
+
+
+```
+Translation Error: Java method does not return a value
+```
+    Trie-3-Better.py:63:63 -> return delete(root, word, 0)
+    Trie-2-Better.py:63:63 -> return os.path.join(root, word, 0)
+    Trie-4-Better.py:65:65 -> return os.path.join(
+
+
+```
+Translation Error: Incorrect arguments in method call
+```
+     Trie-5-Worse.py:91:91 -> self.enumerate("".join(entry) for entry in entries)
+    Trie-3-Better.py:92:92 -> enumerate(
+     Trie-1-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-2-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-3-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-4-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+    Trie-2-Better.py:93:93 -> enumerate(
+    Trie-5-Better.py:95:95 -> enumerate(
+    Trie-4-Better.py:98:98 -> enumerate(
+
+
+```
+Spurious Error: Irrelevant code
+```
+     Trie-5-Worse.py:91:91 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-1-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-2-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-3-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+     Trie-4-Worse.py:92:92 -> self.enumerate("".join(entry) for entry in entries)
+    Trie-3-Better.py:93:97 -> [\n                root\n                for root, dirs, files in os.walk(". ")\n                if not os.path.exists(os.path.join(root, "__init__.py "))\n            ]
+     Trie-3-Worse.py:93:97 -> return Value(\n            "".join(entry[0] for entry in entries),\n            root="".join(entry[1] for entry in entries),\n            verbose=True,\n        )
+     Trie-4-Worse.py:93:97 -> return Value(\n            "".join(entry[0] for entry in entries),\n            root="".join(entry[1] for entry in entries),\n            verbose=True,\n        )
+    Trie-2-Better.py:94:98 -> [\n                root\n                for root, dirs, files in os.walk(". ")\n                if not os.path.exists(os.path.join(root, "__init__.py"))\n            ]
+    Trie-4-Better.py:65:68 -> return os.path.join(\n            root,\n            word,\n        )
+   Trie-5-Better.py:96:100 -> [\n                root\n                for root, dirs, files in os.walk(". ")\n                if not os.path.exists(os.path.join(root, "__init__.py"))\n            ]
+   Trie-4-Better.py:99:103 -> [\n                root\n                for root, dirs, files in os.walk(". ")\n                if not os.path.exists(os.path.join(root, "__init__.py"))\n            ]
+  Trie-3-Better.py:100:103 -> root\n            for root, dirs, files in enumerate(files)\n            if not os.path.exists(os.path.join(root, "__init__.py "))\n        ]
+  Trie-4-Better.py:106:109 -> root\n            for root, dirs, files in entries\n            if not os.path.exists(os.path.join(root, "__init__.py"))\n        ]
+
+
+```
+Spurious Error: Unnecessary import
+```
+      Trie-2-Better.py:1:1 -> import os
+      Trie-3-Better.py:1:1 -> import os
+      Trie-4-Better.py:1:1 -> import os
+      Trie-5-Better.py:1:1 -> import os
+
+
+```
+Translation Error: Incorrect return object
+```
+     Trie-3-Worse.py:93:93 -> return Value(
+     Trie-4-Worse.py:93:93 -> return Value(
+     Trie-4-Worse.py:55:55 -> return None
+    Trie-3-Better.py:99:99 -> return [
+  Trie-4-Better.py:105:105 -> return [
+
+
+```
+Spurious Error: Unnecessary call to `strip()`
+```
+  Trie-3-Better.py:110:110 -> entries.append(entry.strip())
+
+
+```
+No Error: Explicit type annotation is OK
+```
+  Trie-3-Better.py:118:118 -> def merge(self, other_trie: Trie):
+
+
+```
+Translation Error: Expected call to helper method
+```
+    Trie-4-Better.py:65:65 -> return os.path.join(
+
+
+```
+No Error: Stylistic difference in method naming
+```
+   Trie-5-Worse.py:110:110 -> def _merge(self, other_trie):
+   Trie-2-Worse.py:111:111 -> def _merge(self, other_trie):
+   Trie-3-Worse.py:115:115 -> def _merge(self, other_trie):
+   Trie-4-Worse.py:115:115 -> def _merge(self, other_trie):
+  Trie-4-Better.py:124:124 -> def Merge(self, other_trie):
+
+
+```
+Translation Error: Comparing dictionary to list won't check for empty dictionary
+```
+    Trie-4-Better.py:80:80 -> return current.get_children() == []
+    Trie-4-Better.py:91:91 -> return current.get_children() == []
+     Trie-5-Worse.py:73:73 -> return current.get_children() == []
+     Trie-2-Worse.py:74:74 -> return current.children == []
+     Trie-3-Worse.py:74:74 -> return current.children == []
+     Trie-4-Worse.py:74:74 -> return current.children == []
+     Trie-5-Worse.py:84:84 -> return current.get_children() == []
+     Trie-3-Worse.py:85:85 -> return current.children == []
+     Trie-2-Worse.py:85:85 -> return current.getChildren == []
+
+
+```
+Translation Error: Incorrect assignment value
+```
+    Trie-5-Better.py:15:15 -> self.children = None
+
+
+```
+Translation Error: Incorrect argument order in method call
+```
+    Trie-5-Better.py:84:84 -> self.delete(word, node, index + 1) and not node.isEndOfWord()
+
+
+```
+Spurious Error: Unnecessary return statement
+```
+     Trie-2-Worse.py:62:62 -> return self.root, word, 0
+     Trie-2-Worse.py:45:45 -> return current
+     Trie-3-Worse.py:45:45 -> return current
+     Trie-4-Worse.py:47:47 -> return current
+     Trie-5-Worse.py:47:47 -> return current
+  Trie-5-Better.py:116:116 -> return entries
+   Trie-5-Worse.py:116:116 -> return other_trie
+   Trie-2-Worse.py:117:117 -> return other_trie
+   Trie-1-Worse.py:117:117 -> return other_trie.copy()
+   Trie-3-Worse.py:121:121 -> return other_trie
+   Trie-4-Worse.py:121:121 -> return other_trie
+
+
+```
+Translation Error: Instance member not accessed via method
+```
+     Trie-3-Worse.py:51:51 -> node = current.children[ch]
+     Trie-2-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-3-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-4-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-1-Worse.py:52:52 -> node = current.children[ch]
+     Trie-2-Worse.py:74:74 -> return current.children == []
+     Trie-3-Worse.py:74:74 -> return current.children == []
+     Trie-4-Worse.py:74:74 -> return current.children == []
+     Trie-2-Worse.py:55:55 -> return current.end_of_word
+     Trie-3-Worse.py:55:55 -> return current.end_of_word
+     Trie-3-Worse.py:85:85 -> return current.children == []
+     Trie-4-Worse.py:77:77 -> node = current.children[ch, None]
+
+
+```
+Language Error: Did not convert Java method to equivalent Python method
+```
+     Trie-1-Worse.py:84:84 -> current.getChildren().remove(ch)
+
+
+```
+Spurious Error: Unnecessary array lookup
+```
+     Trie-1-Worse.py:85:85 -> return current.getChildren()[ch]
+
+
+```
+Spurious Error: Unnecessary call to `pop()`
+```
+   Trie-1-Worse.py:103:103 -> entries.append(entry.pop())
+   Trie-2-Worse.py:103:103 -> entries.append(entry.pop())
+
+
+```
+Translation Error: Instance member doesn’t exist
+```
+     Trie-2-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-3-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-4-Worse.py:81:81 -> self.delete(node, word, index + 1) and not node.end_of_word
+     Trie-2-Worse.py:73:73 -> current.end_of_word = False
+     Trie-3-Worse.py:73:73 -> current.end_of_word = False
+     Trie-2-Worse.py:44:44 -> current.end_of_word = True
+     Trie-3-Worse.py:44:44 -> current.end_of_word = True
+     Trie-2-Worse.py:55:55 -> return current.end_of_word
+     Trie-3-Worse.py:55:55 -> return current.end_of_word
+     Trie-4-Worse.py:46:46 -> current.end_of_word = True
+
+
+```
+Translation Error: Expected method call to assign value to instance member
+```
+     Trie-2-Worse.py:73:73 -> current.end_of_word = False
+     Trie-3-Worse.py:73:73 -> current.end_of_word = False
+     Trie-2-Worse.py:44:44 -> current.end_of_word = True
+     Trie-3-Worse.py:44:44 -> current.end_of_word = True
+     Trie-4-Worse.py:46:46 -> current.end_of_word = True
+
+
+```
+Translation Error: Instance method doesn’t exist
+```
+     Trie-2-Worse.py:71:71 -> if not current.end_of_word():
+     Trie-3-Worse.py:71:71 -> if not current.end_of_word():
+     Trie-4-Worse.py:71:71 -> if not current.end_of_word():
+
+
+```
+Translation Error: Incorrect translation of logical test
+```
+     Trie-2-Worse.py:74:74 -> return current.children == []
+     Trie-3-Worse.py:74:74 -> return current.children == []
+     Trie-4-Worse.py:74:74 -> return current.children == []
+
+
+```
+Translation Error: Incorrect method name used in call
+```
+   Trie-5-Worse.py:115:115 -> self.__insert(entry)
+   Trie-2-Worse.py:116:116 -> self._insert(entry)
+   Trie-3-Worse.py:120:120 -> self._insert(entry)
+   Trie-4-Worse.py:120:120 -> self._insert(entry)
+
+
+```
+Translation Error: Method call missing argument list (need to add `()`)
+```
+     Trie-2-Worse.py:85:85 -> return current.getChildren == []
+
+
+```
+Language Error: Incorrect comparison with `null` instead of `None`
+```
+     Trie-3-Worse.py:52:52 -> if node == null:
+
+
+```
+Spurious Error: Unexpected return value
+```
+     Trie-3-Worse.py:62:62 -> return root, word, 0
+     Trie-4-Worse.py:62:62 -> return self.root
+
+
+```
+Translation Error: Incorrect translation of method call (expected `()`, not `[]`)
+```
+     Trie-3-Worse.py:77:77 -> node = current.children.get[ch, None]
+
+
+```
+Spurious Error: Unnecessary call to `ord()`
+```
+   Trie-4-Worse.py:111:111 -> entry.append(ord(key))
+
+
+```
+Translation Error: Incorrect translation of dictionary lookup
+```
+   Trie-5-Worse.py:107:107 -> self.enumerate(entry, current.get_children(key), entries)
+   Trie-4-Worse.py:112:112 -> self.enumerate(entry, current.get_children(key), entries)
+
+
