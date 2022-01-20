@@ -100,9 +100,8 @@ Our motivation in publishing this code is to enable reproducability of our work.
 If you found these supplemental materials useful in your work, we kindly request that you cite our paper.
 
 ### ACM Reference Format
-```
-Justin D. Weisz, Michael Muller, Steven Ross, Fernando Martinez, Stephanie Houde, Mayank Agarwal, Kartik Talamadupula, and John T. Richards. 2022. Better Together? An Evaluation of AI-Supported Code Translation. In 27th International Conference on Intelligent User Interfaces (IUI ’22), March 22–25, 2022, Helsinki, Finland. ACM, New York, NY, USA, 35 pages. https://doi.org/10.1145/3490099.3511157
-```
+
+> Justin D. Weisz, Michael Muller, Steven Ross, Fernando Martinez, Stephanie Houde, Mayank Agarwal, Kartik Talamadupula, and John T. Richards. 2022. Better Together? An Evaluation of AI-Supported Code Translation. In 27th International Conference on Intelligent User Interfaces (IUI ’22), March 22–25, 2022, Helsinki, Finland. ACM, New York, NY, USA, 35 pages. https://doi.org/10.1145/3490099.3511157
 
 ### BibTeX
 
